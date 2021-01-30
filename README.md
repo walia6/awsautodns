@@ -32,7 +32,7 @@ aws-cli must be configured for the root user.
 - `Default output format` must be set to `json`
 ## Install
 Install all dependencies (net-tools, aws-cli, gcc).
-- Ubuntu: `sudo apt-get -y install net-tools && sudo apt-get -y install awscli && sudo apt-get -y install gcc`
+- Ubuntu: `sudo apt -y install net-tools && sudo apt -y install awscli && sudo apt -y install gcc`
 - Amazon Linux 2/RHEL/Fedora: `sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc`
 
 Clone this repo and enter it's directory.
