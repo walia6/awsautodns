@@ -31,9 +31,9 @@ aws-cli must be configured for the root user.
 - `sudo aws configure`
 - `Default output format` must be set to `json`
 ## Install
-Install all dependencies (net-tools and aws-cli).
-- Ubuntu: `sudo apt-get -y install net-tools && sudo apt-get -y install aws-cli`
-- Amazon Linux 2/RHEL/Fedora: `sudo yum -y install net-tools && sudo yum -y install aws-cli`
+Install all dependencies (net-tools, aws-cli, gcc).
+- Ubuntu: `sudo apt-get -y install net-tools && sudo apt-get -y install aws-cli && sudo apt-get -y install gcc`
+- Amazon Linux 2/RHEL/Fedora: `sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc`
 
 Run the install bash file
 - `sudo bash install.sh`
