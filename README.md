@@ -7,7 +7,7 @@
 ## Configuration
 **awsautodns** is configured by creating tags attached with the instance. The available configuration tags are as follows:
 - `autodnsdomain` - The full domain name to point to. (ex. `dev.example.com`)
-- `autohostedzoneid` - The Hosted Zone ID (ex. `Z119WBBTVP5WFX`)
+- `autodnshostedzoneid` - The Hosted Zone ID (ex. `Z119WBBTVP5WFX`)
 
 **awsautodus** uses aws-cli to interact with AWS.
 It is best practice to create an AMI User for the tool to use with only the required permissions (make sure to save the access key). The required permissions are as follows:
