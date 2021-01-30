@@ -34,5 +34,6 @@ aws-cli must be configured for the root user.
 Install all dependencies (net-tools and aws-cli).
 - Ubuntu: `sudo apt-get -y install net-tools && sudo apt-get -y install aws-cli`
 - Amazon Linux 2/RHEL/Fedora: `sudo yum -y install net-tools && sudo yum -y install aws-cli`
+
 Run the install bash file
 - `sudo bash install.sh`
