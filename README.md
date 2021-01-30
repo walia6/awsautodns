@@ -46,7 +46,7 @@ Install all dependencies.
 	```
 
 - Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc, make):
-`sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc && sudo yum -y install make`
+`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc && sudo yum -y install make`
 
 Clone this repo.
 - `sudo git clone https://github.com/walia6/awsautodns.git`
