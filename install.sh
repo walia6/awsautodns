@@ -17,7 +17,11 @@ mkdir /opt/awsautodns
 mv * /opt/awsautodns/.
 cd /opt/awsautodns
 rm -rf $SCRIPTPATH
-setenforce 0 #This has security implications, but is necessary due to a bug in distros such as RHEL.
+
+#These lines have security implications, but is necessary in some distros (such as RHEL) due to a bug.
+setenforce 0
+sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+
 systemctl enable awsautodns
 systemctl start awsautodns
 cat /var/log/awsautodns.log
