@@ -1,0 +1,11 @@
+[Unit]
+Description=awsautodns
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sudo /opt/awsautodns/lua /opt/awsautodns/startup.lua
+RemainAfterExit=true
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
