@@ -1,6 +1,6 @@
 
 ## Introduction
-**awsautodns** is a tool to allow AWS EC2 Instances to automatically register their IP address in a Route53 Hosted Zone.
+**awsautodns** is a tool that allows AWS EC2 Instances to automatically register their IP address in a Route53 Hosted Zone.
 
 ## Install
 Install all dependencies (net-tools).
