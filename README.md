@@ -1,4 +1,5 @@
 
+
 ## Introduction
 **awsautodns** is a tool that allows AWS EC2 Instances to automatically register their IP address in a Route53 Hosted Zone at startup.
 
@@ -43,8 +44,16 @@ Install all dependencies.
 	```
 
 - Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc, make):
-`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc && sudo yum -y install make`
-
+`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make`
+	- If aws-cli is not already installed, install it.
+	```
+	sudo yum -y install unzip
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	unzip awscliv2.zip
+	rm awscliv2.zip
+	sudo ./aws/install -b /usr/sbin
+	rm -rf aws/
+	```
 Clone this repo.
 - `sudo git clone https://github.com/walia6/awsautodns.git`
 
