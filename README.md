@@ -32,7 +32,8 @@ aws-cli must be configured for the root user.
 ## Install
 Install all dependencies.
 - Ubuntu (net-tools, aws-cli, gcc, make): 
-`sudo apt -y update && sudo apt -y install net-tools && sudo apt -y install gcc && sudo apt -y install make`
+
+	`sudo apt -y update && sudo apt -y install net-tools && sudo apt -y install gcc && sudo apt -y install make`
 	- If aws-cli is not already installed, install it.
 	```
 	sudo apt -y install unzip
@@ -44,7 +45,8 @@ Install all dependencies.
 	```
 
 - Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc, make):
-`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make`
+
+	`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make`
 	- If aws-cli is not already installed, install it.
 	```
 	sudo yum -y install unzip
