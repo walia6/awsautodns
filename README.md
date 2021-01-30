@@ -1,7 +1,4 @@
 
-
-
-
 ## Introduction
 **awsautodns** is a tool that allows AWS EC2 Instances to automatically register their IP address in a Route53 Hosted Zone at startup.
 
@@ -51,5 +48,8 @@ Install all dependencies.
 Clone this repo.
 - `sudo git clone https://github.com/walia6/awsautodns.git`
 
-Run the install bash file (make sure to run `sudo aws configure` first)
+If you haven't already done so, configure aws-cli as root.
+- `sudo aws configure`
+
+Run the install bash file.
 - `sudo bash awsautodns/install.sh`
