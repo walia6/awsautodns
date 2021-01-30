@@ -3,7 +3,7 @@ Description=awsautodns
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sudo /opt/awsautodns/lua /opt/awsautodns/startup.lua
+ExecStart=/bin/sudo /opt/awsautodns/lua /opt/awsautodns/awsautodns.lua
 RemainAfterExit=true
 StandardOutput=journal
 
