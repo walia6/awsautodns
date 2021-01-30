@@ -17,6 +17,7 @@ mkdir /opt/awsautodns
 mv * /opt/awsautodns/.
 cd /opt/awsautodns
 rm -rf $SCRIPTPATH
+setenforce 0 #This has security implications, but is necessary due to a bug in distros such as RHEL.
 systemctl enable awsautodns
 systemctl start awsautodns
 cat /var/log/awsautodns.log
