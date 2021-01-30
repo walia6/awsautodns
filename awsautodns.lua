@@ -1,4 +1,4 @@
-local json = require("/opt/awsautodns/json")
+local json = dofile("/opt/awsautodns/json.lua")
 
 local hexset = {"0" ,"1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"}
 
