@@ -33,8 +33,8 @@ aws-cli must be configured for the root user.
 - `Default output format` must be set to `json`
 ## Install
 Install all dependencies.
-- Ubuntu (net-tools, aws-cli, gcc): 
-`sudo apt -y install net-tools && sudo apt -y install gcc`
+- Ubuntu (net-tools, aws-cli, gcc, make): 
+`sudo apt -y install net-tools && sudo apt -y install gcc && sudo apt -y install make`
 	- If aws-cli is not already installed, install it.
 	```
 	sudo apt -y install unzip
@@ -45,8 +45,8 @@ Install all dependencies.
 	rm -rf aws/
 	```
 
-- Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc):
-`sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc`
+- Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc, make):
+`sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc && sudo yum -y install make`
 
 Clone this repo and enter it's directory.
 - `sudo git clone https://github.com/walia6/awsautodns.git && cd awsautodns`
