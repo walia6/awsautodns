@@ -49,7 +49,7 @@ Install all dependencies.
 `sudo yum -y install net-tools && sudo yum -y install aws-cli && sudo yum -y install gcc`
 
 Clone this repo and enter it's directory.
-- `sudo git clone https://github.com/walia6/awsautodns.git $$ cd awsautodns`
+- `sudo git clone https://github.com/walia6/awsautodns.git && cd awsautodns`
 
 Run the install bash file (make sure to run `sudo aws configure` first)
 - `sudo bash install.sh`
