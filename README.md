@@ -42,6 +42,7 @@ Install all dependencies.
 	unzip awscliv2.zip
 	rm awscliv2.zip
 	sudo ./aws/install
+	rm -rf aws/
 	```
 
 - Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc):
