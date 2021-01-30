@@ -20,7 +20,7 @@ rm -rf $SCRIPTPATH
 
 #These lines have security implications, but is necessary in some distros (such as RHEL) due to a bug.
 setenforce 0
-sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 
 systemctl enable awsautodns
 systemctl start awsautodns
