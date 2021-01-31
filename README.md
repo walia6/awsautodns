@@ -79,6 +79,7 @@ If you haven't already done so, configure aws-cli as root.
 - `sudo aws configure`
 
 Run the install bash file.
+Note: In RHEL, the install script must set `SELINUX=disabled`, due to a bug with SELinux. This has security implications.
 - `sudo bash awsautodns/install.sh`
 ## Uninstallation
 Uninstalling **awsautodns** is simple.
