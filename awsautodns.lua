@@ -39,10 +39,14 @@ local function execute(tExecute)
     return contents
 end
 
+--Find the network interface open to the internet
+local networkinterface = execute("ip route get $(getent ahosts google.com | awk '{print $1; exit}') | grep -Po '(?<=(dev )).*(?= src| proto)'")
+networkinterface = string.sub(networkinterface, 1, #networkinterface - 1)
+
 --Get the privateip
-local a = execute("ifconfig eth0 | grep 'inet '")
+local a = execute("ifconfig " .. networkinterface .. " | grep 'inet '")
 local privateip
-if string.find(a, "addr:") then
+if string.find(a, "addr:") then --Figure out which version of ifconfig is installed
     privateip = string.sub(a, ({string.find(a, "inet")})[2] + 7, string.find(a, "Bcast") - 3)
 else
     privateip = string.sub(a, ({string.find(a, "inet")})[2] + 2, string.find(a, "netmask") - 3)
