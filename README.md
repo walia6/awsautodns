@@ -1,14 +1,16 @@
-
-
 ## Introduction
-**awsautodns** is a tool that allows AWS EC2 Instances to automatically register their IP address in a Route53 Hosted Zone at startup.
-
+**awsautodns** is a tool that allows an AWS EC2 Instance to automatically register it's IP address in a Route53 Hosted Zone at startup. The install script creates a oneshot service, `awsautodns.service`, and sets it to start at boot, by installing it to `multi-user.target`.
+## Compatibility
+**awsautodns** has been tested to work with the following Linux distros:
+- Amazon Linux 2
+- Ubuntu Server 20.04 LTS
+- Red Hat Enterprise Linux 8
 ## Configuration
 **awsautodns** is configured by creating tags attached with the instance. The available configuration tags are as follows:
 - `autodnsdomain` - The full domain name to point to. (ex. `dev.example.com`)
 - `autodnshostedzoneid` - The Hosted Zone ID (ex. `Z119WBBTVP5WFX`)
 
-**awsautodus** uses aws-cli to interact with AWS.
+**awsautodns** uses aws-cli to interact with AWS.
 It is best practice to create an AMI User for the tool to use with only the required permissions (make sure to save the access key). The required permissions are as follows:
 ```
 {
