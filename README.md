@@ -76,4 +76,5 @@ sudo rm -f /etc/systemd/system/awsautodns.service
 sudo rm -rf /opt/awsautodns
 ```
 If you wish to also remove the log file,
+
 `sudo rm -f /var/log/awsautodns.log`.
