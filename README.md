@@ -5,9 +5,9 @@
 
 **awsautodns** is useful for avoiding fees associated with using an elastic IP address.
 ## Compatibility
-**awsautodns** has been tested to work with the following Linux distros:
+**awsautodns** has been tested to work on both ARM64 and x86-64 on the following Linux distros:
 - Amazon Linux 2
-- Ubuntu Server 20.04 LTS
+- Ubuntu Server 16/18/20.04 LTS
 - Red Hat Enterprise Linux 8
 ## Dependencies
 **awsautodns** has several dependencies for installation.
