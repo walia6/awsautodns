@@ -26,6 +26,10 @@ rm -rf $SCRIPTPATH
 setenforce 0
 sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 
+#Enable and start the service with systemctl
 systemctl enable awsautodns
 systemctl start awsautodns
+
+#Give some more details
 cat /var/log/awsautodns.log
+echo "The log file can be found at /var/log/awsautodns.log"
