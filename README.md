@@ -1,4 +1,5 @@
 
+
 ## Introduction
 **awsautodns** is a tool that allows an AWS EC2 Instance to automatically register it's IP address in a Route53 Hosted Zone at startup. The install script creates a oneshot service, `awsautodns.service`, and sets it to start at boot, by installing it to `multi-user.target`.
 
@@ -41,16 +42,13 @@ It is best practice to create an AMI User for the tool to use with only the requ
 	"Resource": "arn:aws:route53:::hostedzone/YOURHOSTEDZONEIDHERE"
 }
 ```
-
-aws-cli must be configured for the root user.
-- `sudo aws configure`
-- `Default output format` must be set to `json`
 ## Installation
 Install all dependencies.
 - Ubuntu (net-tools, aws-cli, gcc, make, git): 
 
 	`sudo apt -y update && sudo apt -y install net-tools && sudo apt -y install gcc && sudo apt -y install make && sudo apt -y install git`
-	- If aws-cli is not already installed, install it.
+	
+	If aws-cli is not already installed, install it.
 	```
 	sudo apt -y install unzip
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -63,7 +61,8 @@ Install all dependencies.
 - Amazon Linux 2/RHEL (net-tools, aws-cli, gcc, make, git):
 
 	`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make && sudo yum -y install git`
-	- If aws-cli is not already installed, install it.
+	
+	If aws-cli is not already installed, install it.
 	```
 	sudo yum -y install unzip
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -72,15 +71,21 @@ Install all dependencies.
 	sudo ./aws/install -b /usr/sbin
 	rm -rf aws/
 	```
-Clone this repo.
-- `sudo git clone https://github.com/walia6/awsautodns.git`
-
 If you haven't already done so, configure aws-cli as root.
-- `sudo aws configure`
+- The `Default output format` must be set to `json`
+```
+sudo su
+aws configure && exit
+```
+
+Clone this repo.
+
+`sudo git clone https://github.com/walia6/awsautodns.git`
 
 Run the install bash file.
 Note: In RHEL, the install script must set `SELINUX=disabled`, due to a bug with SELinux. This has security implications.
-- `sudo bash awsautodns/install.sh`
+
+`sudo bash awsautodns/install.sh`
 ## Uninstallation
 Uninstalling **awsautodns** is simple.
 ```
