@@ -1,5 +1,7 @@
 ## Introduction
 **awsautodns** is a tool that allows an AWS EC2 Instance to automatically register it's IP address in a Route53 Hosted Zone at startup. The install script creates a oneshot service, `awsautodns.service`, and sets it to start at boot, by installing it to `multi-user.target`.
+
+**awsautodns** is useful for avoiding fees associated with using an elastic IP address.
 ## Compatibility
 **awsautodns** has been tested to work with the following Linux distros:
 - Amazon Linux 2
@@ -31,7 +33,7 @@ It is best practice to create an AMI User for the tool to use with only the requ
 aws-cli must be configured for the root user.
 - `sudo aws configure`
 - `Default output format` must be set to `json`
-## Install
+## Installation
 Install all dependencies.
 - Ubuntu (net-tools, aws-cli, gcc, make, git): 
 
@@ -46,7 +48,7 @@ Install all dependencies.
 	rm -rf aws/
 	```
 
-- Amazon Linux 2/RHEL/Fedora (net-tools, aws-cli, gcc, make, git):
+- Amazon Linux 2/RHEL (net-tools, aws-cli, gcc, make, git):
 
 	`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make && sudo yum -y install git`
 	- If aws-cli is not already installed, install it.
@@ -66,3 +68,12 @@ If you haven't already done so, configure aws-cli as root.
 
 Run the install bash file.
 - `sudo bash awsautodns/install.sh`
+## Uninstallation
+Uninstalling **awsautodns** is simple.
+```
+sudo systemctl stop awsautodns && sudo systemctl disable awsautodns
+sudo rm -f /etc/systemd/system/awsautodns.service
+sudo rm -rf /opt/awsautodns
+```
+If you wish to also remove the log file,
+`sudo rm -f /var/log/awsautodns.log`.
