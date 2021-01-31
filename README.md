@@ -49,6 +49,7 @@ Install all dependencies.
 	`sudo apt -y update && sudo apt -y install net-tools && sudo apt -y install gcc && sudo apt -y install make && sudo apt -y install git`
 	
 	If aws-cli is not already installed, install it.
+	- If installing on an ARM64 system, replace "x86_64" with "aarch64".
 	```
 	sudo apt -y install unzip
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -63,6 +64,7 @@ Install all dependencies.
 	`sudo yum -y update && sudo yum -y install net-tools && sudo yum -y install gcc && sudo yum -y install make && sudo yum -y install git`
 	
 	If aws-cli is not already installed, install it.
+	- If installing on an ARM64 system, replace "x86_64" with "aarch64".
 	```
 	sudo yum -y install unzip
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
